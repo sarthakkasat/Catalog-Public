@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: sarthak
+spec:
+  profile:
+    displayName: Sarthak Kasat
+    email: sarthakkasat.s@gmail.con
+    picture: https://example.com/staff/jenny-with-party-hat.jpeg
+  memberOf: [team-a]
