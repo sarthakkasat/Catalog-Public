@@ -5,7 +5,7 @@ metadata:
   annotations:
     backstage.io/managed-by-location: file:/Users/sarthakkasat/Desktop/backstage/packages/catalog-model/examples/apis/wayback-search-api.yaml
     backstage.io/managed-by-origin-location: file:/Users/sarthakkasat/Desktop/backstage/packages/catalog-model/examples/all.yaml
-  name: wayback-search1
+  name: wayback-search
   description: Search API for the wayback machine
   uid: bd6d0038-5dc9-40bf-a34e-075ef7c44f09
   etag: 847e220a5a93be8145a996a8c01bb60596dce06b
