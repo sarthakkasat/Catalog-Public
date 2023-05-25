@@ -4,7 +4,7 @@ metadata:
   name: Harness1
   description: test service
   annotations:
-    harness.io/project-url: https://stress.harness.io/ng/account/px7xd_BFRCi-pfWPYXVjvw/home/orgs/default/projects/ECS_Sainath/pipelines
+    harness.io/project-url: https://stress.harness.io/ng/account/px7xd_BFRCi-pfWPYXVjvw/home/orgs/default/projects/ECS_Sainath/pipelines/
     
   tags:
     - java
