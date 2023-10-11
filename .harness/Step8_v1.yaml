@@ -1,0 +1,14 @@
+template:
+  name: Step8
+  identifier: Step8
+  versionLabel: v1
+  type: Step
+  projectIdentifier: Sarthak
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: K8sRollingDeploy
+    timeout: 10m
+    spec:
+      skipDryRun: false
+      pruningEnabled: false
