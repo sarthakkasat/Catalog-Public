@@ -1,0 +1,26 @@
+pipeline:
+  name: main-patch-123456
+  identifier: mainpatch123456
+  projectIdentifier: Sarthak
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: main-patch-123456
+        identifier: mainpatch123456
+        tags: {}
+        template:
+          templateRef: mainpatch123456
+          versionLabel: v1
+          gitBranch: main-patch-123456
+          templateInputs:
+            type: Deployment
+            spec:
+              service:
+                serviceRef: <+input>
+                serviceInputs: <+input>
+              environment:
+                environmentRef: <+input>
+                environmentInputs: <+input>
+                serviceOverrideInputs: <+input>
+                infrastructureDefinitions: <+input>
