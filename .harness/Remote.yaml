@@ -1,0 +1,6 @@
+environment:
+  name: Remote
+  identifier: Remote
+  orgIdentifier: default
+  projectIdentifier: SarthakTest
+  type: Production
