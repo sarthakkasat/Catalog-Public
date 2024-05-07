@@ -1,0 +1,30 @@
+infrastructureDefinition:
+  name: Test
+  identifier: Test
+  orgIdentifier: default
+  projectIdentifier: SarthakTest
+  environmentRef: Remote
+  deploymentType: CustomDeployment
+  type: CustomDeployment
+  spec:
+    customDeploymentRef:
+      templateRef: account.CDPAutomationTemplateNGDmO4JH3D
+      versionLabel: V1
+    variables:
+      - name: git_connector
+        type: Secret
+        description: ""
+        value: GitPrivate
+      - name: gitSecret
+        type: Connector
+        description: ""
+        value: Test
+      - name: Name
+        type: String
+        description: ""
+        value: cd-test
+      - name: instanceCount
+        type: Number
+        description: ""
+        value: 1
+  allowSimultaneousDeployments: false
