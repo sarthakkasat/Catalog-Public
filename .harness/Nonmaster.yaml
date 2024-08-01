@@ -1,0 +1,6 @@
+environment:
+  name: Non-master
+  identifier: Nonmaster
+  orgIdentifier: default
+  projectIdentifier: Sarthak
+  type: PreProduction
