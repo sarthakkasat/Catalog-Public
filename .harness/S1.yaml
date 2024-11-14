@@ -1,0 +1,22 @@
+inputSet:
+  name: S1
+  identifier: S1
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  projectIdentifier: doNotDeleteSarthakTest
+  pipeline:
+    identifier: ASD
+    stages:
+      - stage:
+          identifier: s1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo <+trigger.targetBranch>
