@@ -1,0 +1,22 @@
+inputSet:
+  name: I1
+  identifier: I1
+  orgIdentifier: default
+  projectIdentifier: Sarthak
+  pipeline:
+    identifier: CDS103674
+    stages:
+      - stage:
+          identifier: s1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo 1
