@@ -1,5 +1,6 @@
 inputSet:
   name: I1
+  tags: {}
   identifier: I1
   orgIdentifier: default
   projectIdentifier: Sarthak
@@ -19,4 +20,4 @@ inputSet:
                       source:
                         type: Inline
                         spec:
-                          script: echo 1
+                          script: echo <+trigger.targetBranch>
