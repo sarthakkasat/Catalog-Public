@@ -28,3 +28,14 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+  notificationRules:
+    - name: webhookNotifications
+      identifier: webhookNotifications
+      pipelineEvents:
+        - type: AllEvents
+      notificationMethod:
+        type: Slack
+        spec:
+          userGroups: []
+          webhookUrl: https://harness-test.slack.com/archives/D074NJULS31
+      enabled: true
