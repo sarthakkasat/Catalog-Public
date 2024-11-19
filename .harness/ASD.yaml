@@ -34,8 +34,7 @@ pipeline:
       pipelineEvents:
         - type: AllEvents
       notificationMethod:
-        type: Slack
+        type: Webhook
         spec:
-          userGroups: []
-          webhookUrl: https://hooks.slack.com/services/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
+          webhookUrl: https://webhook.site/535f1a23-9e60-4854-bc05-c14ba67ae7d0
       enabled: true
