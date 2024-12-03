@@ -1,0 +1,7 @@
+service:
+  name: Remote Migrate
+  identifier: Remote_Migrate
+  orgIdentifier: default
+  projectIdentifier: Sarthak
+  serviceDefinition:
+    spec: {}
