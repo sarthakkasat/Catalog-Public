@@ -13,7 +13,7 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: <+input>
+            serviceRef: zack
           environment:
             environmentRef: <+input>
             deployToAll: false
