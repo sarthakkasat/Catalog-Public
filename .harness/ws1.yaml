@@ -35,7 +35,7 @@ pipeline:
                         configFiles:
                           store:
                             spec:
-                              connectorRef: GithubNew
+                              connectorRef: GithubNew12
                               gitFetchType: Branch
                               branch: main
                               folderPath: /
