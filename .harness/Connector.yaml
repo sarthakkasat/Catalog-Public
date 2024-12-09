@@ -31,3 +31,39 @@ pipeline:
                     isAutoRejectEnabled: false
                     approverInputs: []
         tags: {}
+    - stage:
+        name: s2
+        identifier: s2
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+          buildIntelligence:
+            enabled: true
+          infrastructure:
+            type: KubernetesDirect
+            spec:
+              connectorRef: account.K8sConnector04Oi8P9LBP
+              namespace: default
+              automountServiceAccountToken: true
+              nodeSelector: {}
+              os: Linux
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    connectorRef: org.CDCNGAuto_OrgLevelAzureConnector5Hc
+                    image: <+input>
+                    shell: Sh
+                    command: echo 1
+                  description: s1
+  properties:
+    ci:
+      codebase:
+        connectorRef: SarthakGithub
+        build: <+input>
