@@ -1,0 +1,33 @@
+pipeline:
+  name: Connector
+  identifier: Connector
+  tags: {}
+  projectIdentifier: doNotDeleteSarthakTest
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: s1
+                  identifier: s1
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups:
+                        - account.NGPipeAutoSlackNotifylgkBMYgVUv
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
