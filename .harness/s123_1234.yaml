@@ -1,6 +1,6 @@
 infrastructureDefinition:
   name: s123_1234
-  identifier: s123-1234
+  identifier: s1231234
   orgIdentifier: default
   projectIdentifier: Sarthak
   environmentRef: Nonmaster
