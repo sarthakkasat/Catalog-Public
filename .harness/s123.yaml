@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: s123_123
+  identifier: s123_123
+  orgIdentifier: default
+  projectIdentifier: Sarthak
+  environmentRef: Nonmaster
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: Kubernetes
+    namespace: qwdc
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
