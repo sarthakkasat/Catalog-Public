@@ -1,0 +1,28 @@
+pipeline:
+  name: CustomWaitPipeline1
+  identifier: customWaitPipeline1
+  stages:
+    - stage:
+        name: customWaitStage
+        identifier: customWaitStage
+        description: This stage introduces a wait time of 10 minutes in the pipeline execution.
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  identifier: wait_step
+                  name: Wait Step
+                  description: Create a Wait step to pause the pipeline execution for 10 minutes.
+                  type: Wait
+                  spec:
+                    duration: 10m
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: Ignore
+  projectIdentifier: Sarthak_Test
+  orgIdentifier: default1
+  tags: {}
