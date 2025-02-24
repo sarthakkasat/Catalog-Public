@@ -1,5 +1,5 @@
 pipeline:
-    name: TestAccResourcePipeline_QbmmLq
+    name: TestAccResourcePipeline_QbmmLq_updated
     identifier: TestAccResourcePipeline_QbmmLq   
     allowStageExecutions: false
     projectIdentifier: TestAccResourcePipeline_QbmmLq
