@@ -1,5 +1,5 @@
 pipeline:
-    name: TestAccResourcePipeline_NFI3CW
+    name: TestAccResourcePipeline_NFI3CW_updated
     identifier: TestAccResourcePipeline_NFI3CW   
     allowStageExecutions: false
     projectIdentifier: TestAccResourcePipeline_NFI3CW
