@@ -1,5 +1,5 @@
 pipeline:
-    name: TestAccResourcePipeline_Tig6yv
+    name: TestAccResourcePipeline_Tig6yv_updated
     identifier: TestAccResourcePipeline_Tig6yv   
     allowStageExecutions: false
     projectIdentifier: TestAccResourcePipeline_Tig6yv
