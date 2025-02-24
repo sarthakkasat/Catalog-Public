@@ -1,5 +1,5 @@
 pipeline:
-    name: TestAccResourcePipeline_oR6Pyi
+    name: TestAccResourcePipeline_oR6Pyi_updated
     identifier: TestAccResourcePipeline_oR6Pyi   
     allowStageExecutions: false
     projectIdentifier: TestAccResourcePipeline_oR6Pyi
