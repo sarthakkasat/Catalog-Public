@@ -1,5 +1,5 @@
 pipeline:
-    name: TestAccResourcePipeline_PmymNb
+    name: TestAccResourcePipeline_PmymNb_updated
     identifier: TestAccResourcePipeline_PmymNb   
     allowStageExecutions: false
     projectIdentifier: TestAccResourcePipeline_PmymNb
