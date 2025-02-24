@@ -1,4 +1,0 @@
-environment:
-  name: TestResourceRemoteEnvironment
-  identifier: TestResourceRemoteEnvironment_R5bjs
-  type: PreProduction
