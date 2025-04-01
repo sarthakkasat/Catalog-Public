@@ -1,0 +1,78 @@
+pipeline:
+  name: AppB GitOps Sync Pipeline
+  identifier: appb_gitops_sync_pipeline
+  projectIdentifier: doNotDeleteSarthakTest
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  variables:
+    - name: github_connector
+      type: String
+      value: <+input>
+    - name: repo_name
+      type: String
+      value: <+input>
+    - name: branch
+      type: String
+      value: <+input>
+    - name: argocd_connector
+      type: String
+      value: <+input>
+    - name: app_name
+      type: String
+      value: AppB
+  stages:
+    - stage:
+        name: GitOps Sync
+        identifier: gitops_sync
+        type: Deployment
+        spec:
+          deploymentType: CustomDeployment
+          service:
+            serviceRef: <+input>
+          environment:
+            environmentRef: <+input>
+          execution:
+            steps:
+              - step:
+                  identifier: sync_argocd_app
+                  name: Sync ArgoCD App
+                  type: GitOpsSync
+                  timeout: 10m
+                  spec:
+                    applicationsList:
+                      - applicationName: <+pipeline.variables.app_name>
+                        agentId: <+pipeline.variables.argocd_connector>
+                    applyOnly: false
+                    dryRun: false
+                    forceApply: false
+                    prune: true
+                    retry: false
+                    retryStrategy: {}
+                    syncOptions:
+                      applyOutOfSyncOnly: false
+                      autoCreateNamespace: false
+                      prunePropagationPolicy: foreground
+                      pruneResourcesAtLast: false
+                      replaceResources: false
+                      skipSchemaValidation: false
+                    outputVariables:
+                      - name: sync_status
+                        type: String
+                        value: <+pipeline.stages.stage1.spec.execution.steps.sync_argocd_app.output.status>
+            rollbackSteps: []
+            "":
+              type: K8sCanaryDeploy
+              name: Canary Deployment
+              identifier: canary_deployment
+              spec:
+                instanceSelection:
+                  type: Count
+                  spec:
+                    count: 2
+                skipDryRun: false
+              timeout: 10m
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: StageRollback
