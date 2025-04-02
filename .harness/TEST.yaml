@@ -1,0 +1,5 @@
+service:
+  name: TEST
+  identifier: TEST
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  projectIdentifier: doNotDeleteSarthakTest
