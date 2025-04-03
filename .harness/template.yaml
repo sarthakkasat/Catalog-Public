@@ -1,7 +1,7 @@
 template:
-  name: sv
-  identifier: sv
-  versionLabel: sdv
+  name: sv1
+  identifier: sv1
+  versionLabel: sdv1
   type: Step
   tags: {}
   spec:
