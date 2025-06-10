@@ -45,6 +45,7 @@ pipeline:
             values:
               - serviceRef: Kubernetes_Service
               - serviceRef: zack
+              - serviceRef: MultiTest
             metadata:
               parallel: false
         tags: {}
