@@ -3,3 +3,6 @@ service:
   identifier: MultiTest
   orgIdentifier: default
   projectIdentifier: Sarthak
+  serviceDefinition:
+    spec: {}
+    type: Kubernetes
