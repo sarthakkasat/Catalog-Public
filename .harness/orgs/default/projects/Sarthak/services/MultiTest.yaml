@@ -1,5 +1,5 @@
 service:
-  name: MultiTest
+  name: MultiTest1
   identifier: MultiTest
   orgIdentifier: default
   projectIdentifier: Sarthak
