@@ -46,6 +46,25 @@ pipeline:
               - serviceRef: Kubernetes_Service
               - serviceRef: zack
               - serviceRef: MultiTest
+              - serviceRef: account.CDCNGAuto_ServNgigpclUIl65
+                serviceInputs:
+                  serviceDefinition:
+                    type: Kubernetes
+                    spec:
+                      manifests:
+                        - manifest:
+                            identifier: manifest
+                            type: K8sManifest
+                            spec:
+                              store:
+                                type: Git
+                                spec:
+                                  connectorRef: <+input>
+                      artifacts:
+                        primary:
+                          primaryArtifactRef: <+input>
+                          sources: <+input>
+              - serviceRef: account.CDCNGAuto_ServNgKfUUwBI92J
             metadata:
               parallel: false
         tags: {}
